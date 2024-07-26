@@ -99,6 +99,48 @@
         .contact-info .icon {
             margin-right: 0.5rem;
         }
+
+        @media (max-width: 768px) {
+            .seo-content {
+                flex-direction: column;
+                padding: 0 1rem;
+            }
+
+            .seo-column {
+                margin: 1rem 0;
+                width: 100%;
+            }
+
+            .seo-footer {
+                padding: 1rem 0;
+            }
+
+            .seo-content {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .seo-column:nth-child(3) {
+                order: -1;
+            }
+
+            .seo-column:nth-child(2) {
+                order: 0;
+            }
+
+            .seo-column:nth-child(1) {
+                order: 1;
+            }
+
+            .seo-content,
+            .contact-info {
+                font-size: 1em;
+            }
+
+            .contact-info {
+                margin-bottom: 1rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -109,22 +151,36 @@
         <div class="seo-column">
             <h3>Наши коллекции</h3>
             <ul>
-                <li><span class="icon fa-brands fa-instagram"></span> <a href="https://www.instagram.com/stories/highlights/18230098405281314/" rel="nofollow">ГДЕ ЖИВУТ
+                <li><span class="icon fa-brands fa-instagram"></span> <a
+                        href="https://www.instagram.com/stories/highlights/18230098405281314/" rel="nofollow"
+                        target="_blank">ГДЕ ЖИВУТ
                     МЕЧТЫ</a></li>
-                <li><span class="icon fa-brands fa-instagram"></span> <a href="https://www.instagram.com/stories/highlights/18026014244502877/"
-                       rel="nofollow">МИСТЕРИЯ</a></li>
-                <li><span class="icon fa-brands fa-instagram"></span> <a href="https://www.instagram.com/stories/highlights/18027601112281227/" rel="nofollow">ТАЙНАЯ
+                <li><span class="icon fa-brands fa-instagram"></span> <a
+                        href="https://www.instagram.com/stories/highlights/18026014244502877/"
+                        rel="nofollow" target="_blank">МИСТЕРИЯ</a></li>
+                <li><span class="icon fa-brands fa-instagram"></span> <a
+                        href="https://www.instagram.com/stories/highlights/18027601112281227/" rel="nofollow"
+                        target="_blank">ТАЙНАЯ
                     КОМНАТА</a></li>
-                <li><span class="icon fa-brands fa-instagram"></span> <a href="https://www.instagram.com/stories/highlights/17928623324872616/"
-                       rel="nofollow">МЕЧТАТЕЛИ</a></li>
-                <li><span class="icon fa-brands fa-instagram"></span> <a href="https://www.instagram.com/stories/highlights/18032327882086099/" rel="nofollow">ДУХИ
+                <li><span class="icon fa-brands fa-instagram"></span> <a
+                        href="https://www.instagram.com/stories/highlights/17928623324872616/"
+                        rel="nofollow" target="_blank">МЕЧТАТЕЛИ</a></li>
+                <li><span class="icon fa-brands fa-instagram"></span> <a
+                        href="https://www.instagram.com/stories/highlights/18032327882086099/" rel="nofollow"
+                        target="_blank">ДУХИ
                     ЛЕСА</a></li>
-                <li><span class="icon fa-brands fa-instagram"></span> <a href="https://www.instagram.com/stories/highlights/18011698049241536/" rel="nofollow">ПРО ЛЕС</a>
+                <li><span class="icon fa-brands fa-instagram"></span> <a
+                        href="https://www.instagram.com/stories/highlights/18011698049241536/" rel="nofollow"
+                        target="_blank">ПРО
+                    ЛЕС</a>
                 </li>
-                <li><span class="icon fa-brands fa-instagram"></span> <a href="https://www.instagram.com/stories/highlights/18014017184185653/" rel="nofollow">КОСМОС</a>
+                <li><span class="icon fa-brands fa-instagram"></span> <a
+                        href="https://www.instagram.com/stories/highlights/18014017184185653/" rel="nofollow"
+                        target="_blank">КОСМОС</a>
                 </li>
-                <li><span class="icon fa-brands fa-instagram"></span> <a href="https://www.instagram.com/stories/highlights/18017508689347133/"
-                       rel="nofollow">ЕДИНОРОЖКИ</a></li>
+                <li><span class="icon fa-brands fa-instagram"></span> <a
+                        href="https://www.instagram.com/stories/highlights/18017508689347133/"
+                        rel="nofollow" target="_blank">ЕДИНОРОЖКИ</a></li>
             </ul>
         </div>
         <div class="seo-column">
@@ -136,8 +192,12 @@
             <h3>Контакты</h3>
             <div class="contact-info">
                 <span class="icon fa-solid fa-phone"><a href="tel:+375333812124" rel="nofollow" target="_blank"> +375 33 3812124</a></span>
+            </div>
+            <div class="contact-info">
                 <span class="icon fa-brands fa-telegram"><a href="https://t.me/+375333812124" rel="nofollow"
                                                             target="_blank"> +375 33 3812124</a></span>
+            </div>
+            <div class="contact-info">
                 <span class="icon fa-brands fa-whatsapp"><a href="https://wa.me/375333812124" rel="nofollow"
                                                             target="_blank"> +375 33 3812124</a></span>
             </div>
