@@ -148,9 +148,8 @@
     </style>
 </head>
 <body>
-<iframe id="pdf-viewer"
-        src="https://docs.google.com/viewer?url=https://www.dariafarbe.com/images/oboi.pdf&embedded=true#view=FitW"
-        title="Каталог авторских обоев Daria Farbe"></iframe>
+
+<iframe id="pdf-viewer" src="./images/oboi.pdf" title="Каталог авторских обоев Daria Farbe"></iframe>
 
 <footer class="seo-footer">
     <div class="seo-content">
@@ -222,7 +221,7 @@
 <script>
     function resizePdfViewer() {
         var viewer = document.getElementById('pdf-viewer');
-        viewer.style.height = window.innerHeight + 'px';
+        viewer.style.height = (window.innerHeight * 0.8) + 'px';
     }
 
     window.addEventListener('resize', resizePdfViewer);
