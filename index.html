@@ -2,21 +2,21 @@
 <html lang="ru" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>Авторские обои ручной работы - Daria Farbe</title>
-    <meta name="description"
-          content="Daria Farbe: авторские обои с ручной отрисовкой и высококачественной печатью. Уникальный дизайн и удобная доставка во все страны.">
-    <meta name="keywords"
-          content="авторские обои, обои ручной работы, Daria Farbe, дизайнерские обои, эксклюзивные обои, ручная отрисовка, высококачественная печать, доставка обоев">
-    <link rel="icon" type="image/jpeg" href="./images/logo.jpg">
+    <meta content="Daria Farbe: авторские обои с ручной отрисовкой и высококачественной печатью. Уникальный дизайн и удобная доставка во все страны."
+          name="description">
+    <meta content="авторские обои, обои ручной работы, Daria Farbe, дизайнерские обои, эксклюзивные обои, ручная отрисовка, высококачественная печать, доставка обоев"
+          name="keywords">
+    <link href="./images/logo.jpg" rel="icon" type="image/jpeg">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <meta property="og:title" content="Авторские обои ручной работы - Daria Farbe">
-    <meta property="og:description"
-          content="Уникальные авторские обои от Daria Farbe. Ручная отрисовка, высококачественная печать и доставка по всему миру.">
-    <meta property="og:image" content="./images/logo.jpg">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.dariafarbe.com/">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <meta content="Авторские обои ручной работы - Daria Farbe" property="og:title">
+    <meta content="Уникальные авторские обои от Daria Farbe. Ручная отрисовка, высококачественная печать и доставка по всему миру."
+          property="og:description">
+    <meta content="./images/logo.jpg" property="og:image">
+    <meta content="website" property="og:type">
+    <meta content="https://www.dariafarbe.com/" property="og:url">
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-FRRNN9FLRG"></script>
     <script>
@@ -35,15 +35,29 @@
             margin: 0;
             padding: 0;
             height: 100%;
-            overflow: auto;
-            font-family: 'Inter', sans-serif;
+            overscroll-behavior: none;
         }
 
-        #pdf-viewer {
-            width: 100%;
-            min-height: 90vh;
-            border: none;
+        .container {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .image-gallery {
+            flex-grow: 1;
+            overflow-y: auto;
+            padding: 0 20px 20px 20px;
+            box-sizing: border-box;
+            height: 80vh;
+            overscroll-behavior: contain;
+        }
+
+        .image-gallery img {
+            max-width: 100%;
+            height: auto;
             display: block;
+            margin-bottom: 20px;
         }
 
         .seo-footer {
@@ -100,9 +114,21 @@
             margin-right: 0.5rem;
         }
 
-        @media (max-width: 768px) {
-            #pdf-viewer {
-                height: 80vh;
+        footer {
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+
+        @media (min-width: 768px) {
+            .image-gallery {
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .image-gallery img {
+                width: 100%;
             }
 
             .seo-content {
@@ -148,84 +174,103 @@
     </style>
 </head>
 <body>
-
-<iframe id="pdf-viewer" src="./images/oboi.pdf" title="Каталог авторских обоев Daria Farbe"></iframe>
-
-<footer class="seo-footer">
-    <div class="seo-content">
-        <div class="seo-column">
-            <h3>Наши коллекции</h3>
-            <ul>
-                <li><span class="icon fa-brands fa-instagram"></span> <a
-                        href="https://www.instagram.com/stories/highlights/18230098405281314/" rel="nofollow"
-                        target="_blank">ГДЕ ЖИВУТ
-                    МЕЧТЫ</a></li>
-                <li><span class="icon fa-brands fa-instagram"></span> <a
-                        href="https://www.instagram.com/stories/highlights/18026014244502877/"
-                        rel="nofollow" target="_blank">МИСТЕРИЯ</a></li>
-                <li><span class="icon fa-brands fa-instagram"></span> <a
-                        href="https://www.instagram.com/stories/highlights/18027601112281227/" rel="nofollow"
-                        target="_blank">ТАЙНАЯ
-                    КОМНАТА</a></li>
-                <li><span class="icon fa-brands fa-instagram"></span> <a
-                        href="https://www.instagram.com/stories/highlights/17928623324872616/"
-                        rel="nofollow" target="_blank">МЕЧТАТЕЛИ</a></li>
-                <li><span class="icon fa-brands fa-instagram"></span> <a
-                        href="https://www.instagram.com/stories/highlights/18032327882086099/" rel="nofollow"
-                        target="_blank">ДУХИ
-                    ЛЕСА</a></li>
-                <li><span class="icon fa-brands fa-instagram"></span> <a
-                        href="https://www.instagram.com/stories/highlights/18011698049241536/" rel="nofollow"
-                        target="_blank">ПРО
-                    ЛЕС</a>
-                </li>
-                <li><span class="icon fa-brands fa-instagram"></span> <a
-                        href="https://www.instagram.com/stories/highlights/18014017184185653/" rel="nofollow"
-                        target="_blank">КОСМОС</a>
-                </li>
-                <li><span class="icon fa-brands fa-instagram"></span> <a
-                        href="https://www.instagram.com/stories/highlights/18017508689347133/"
-                        rel="nofollow" target="_blank">ЕДИНОРОЖКИ</a></li>
-            </ul>
-        </div>
-        <div class="seo-column">
-            <h3>О нас</h3>
-            <p>Daria Farbe - это уникальные авторские обои с ручной отрисовкой и высококачественной печатью. Мы создаем
-                эксклюзивные дизайны, которые преобразят ваш интерьер.</p>
-        </div>
-        <div class="seo-column">
-            <h3>Контакты</h3>
-            <div class="contact-info">
-                <span class="icon fa-solid fa-phone"><a href="tel:+375333812124" rel="nofollow" target="_blank"> +375 33 3812124</a></span>
+<div class="container">
+    <div class="image-gallery">
+        <img alt="Daria Farbe 000" src="./images/oboi_000.webp">
+        <img alt="Daria Farbe 001" loading="lazy" src="./images/oboi_001.webp">
+        <img alt="Daria Farbe 002" loading="lazy" src="./images/oboi_002.webp">
+        <img alt="Daria Farbe 003" loading="lazy" src="./images/oboi_003.webp">
+        <img alt="Daria Farbe 004" loading="lazy" src="./images/oboi_004.webp">
+        <img alt="Daria Farbe 005" loading="lazy" src="./images/oboi_005.webp">
+        <img alt="Daria Farbe 006" loading="lazy" src="./images/oboi_006.webp">
+        <img alt="Daria Farbe 007" loading="lazy" src="./images/oboi_007.webp">
+        <img alt="Daria Farbe 008" loading="lazy" src="./images/oboi_008.webp">
+        <img alt="Daria Farbe 009" loading="lazy" src="./images/oboi_009.webp">
+        <img alt="Daria Farbe 010" loading="lazy" src="./images/oboi_010.webp">
+        <img alt="Daria Farbe 011" loading="lazy" src="./images/oboi_011.webp">
+        <img alt="Daria Farbe 012" loading="lazy" src="./images/oboi_012.webp">
+        <img alt="Daria Farbe 013" loading="lazy" src="./images/oboi_013.webp">
+        <img alt="Daria Farbe 014" loading="lazy" src="./images/oboi_014.webp">
+        <img alt="Daria Farbe 015" loading="lazy" src="./images/oboi_015.webp">
+        <img alt="Daria Farbe 016" loading="lazy" src="./images/oboi_016.webp">
+        <img alt="Daria Farbe 017" loading="lazy" src="./images/oboi_017.webp">
+        <img alt="Daria Farbe 018" loading="lazy" src="./images/oboi_018.webp">
+        <img alt="Daria Farbe 019" loading="lazy" src="./images/oboi_019.webp">
+        <img alt="Daria Farbe 020" loading="lazy" src="./images/oboi_020.webp">
+        <img alt="Daria Farbe 021" loading="lazy" src="./images/oboi_021.webp">
+        <img alt="Daria Farbe 022" loading="lazy" src="./images/oboi_022.webp">
+        <img alt="Daria Farbe 023" loading="lazy" src="./images/oboi_023.webp">
+        <img alt="Daria Farbe 024" loading="lazy" src="./images/oboi_024.webp">
+        <img alt="Daria Farbe 025" loading="lazy" src="./images/oboi_025.webp">
+        <img alt="Daria Farbe 026" loading="lazy" src="./images/oboi_026.webp">
+    </div>
+    <footer class="seo-footer">
+        <div class="seo-content">
+            <div class="seo-column">
+                <h3>Наши коллекции</h3>
+                <ul>
+                    <li><span class="icon fa-brands fa-instagram"></span> <a
+                            href="https://www.instagram.com/stories/highlights/18230098405281314/" rel="nofollow"
+                            target="_blank">ГДЕ ЖИВУТ
+                        МЕЧТЫ</a></li>
+                    <li><span class="icon fa-brands fa-instagram"></span> <a
+                            href="https://www.instagram.com/stories/highlights/18026014244502877/"
+                            rel="nofollow" target="_blank">МИСТЕРИЯ</a></li>
+                    <li><span class="icon fa-brands fa-instagram"></span> <a
+                            href="https://www.instagram.com/stories/highlights/18027601112281227/" rel="nofollow"
+                            target="_blank">ТАЙНАЯ
+                        КОМНАТА</a></li>
+                    <li><span class="icon fa-brands fa-instagram"></span> <a
+                            href="https://www.instagram.com/stories/highlights/17928623324872616/"
+                            rel="nofollow" target="_blank">МЕЧТАТЕЛИ</a></li>
+                    <li><span class="icon fa-brands fa-instagram"></span> <a
+                            href="https://www.instagram.com/stories/highlights/18032327882086099/" rel="nofollow"
+                            target="_blank">ДУХИ
+                        ЛЕСА</a></li>
+                    <li><span class="icon fa-brands fa-instagram"></span> <a
+                            href="https://www.instagram.com/stories/highlights/18011698049241536/" rel="nofollow"
+                            target="_blank">ПРО
+                        ЛЕС</a>
+                    </li>
+                    <li><span class="icon fa-brands fa-instagram"></span> <a
+                            href="https://www.instagram.com/stories/highlights/18014017184185653/" rel="nofollow"
+                            target="_blank">КОСМОС</a>
+                    </li>
+                    <li><span class="icon fa-brands fa-instagram"></span> <a
+                            href="https://www.instagram.com/stories/highlights/18017508689347133/"
+                            rel="nofollow" target="_blank">ЕДИНОРОЖКИ</a></li>
+                </ul>
             </div>
-            <div class="contact-info">
+            <div class="seo-column">
+                <h3>О нас</h3>
+                <p>Daria Farbe - это уникальные авторские обои с ручной отрисовкой и высококачественной печатью. Мы
+                    создаем
+                    эксклюзивные дизайны, которые преобразят ваш интерьер.</p>
+            </div>
+            <div class="seo-column">
+                <h3>Контакты</h3>
+                <div class="contact-info">
+                    <span class="icon fa-solid fa-phone"><a href="tel:+375333812124" rel="nofollow" target="_blank"> +375 33 3812124</a></span>
+                </div>
+                <div class="contact-info">
                 <span class="icon fa-brands fa-telegram"><a href="https://t.me/+375333812124" rel="nofollow"
                                                             target="_blank"> +375 33 3812124</a></span>
-            </div>
-            <div class="contact-info">
+                </div>
+                <div class="contact-info">
                 <span class="icon fa-brands fa-whatsapp"><a href="https://wa.me/375333812124" rel="nofollow"
                                                             target="_blank"> +375 33 3812124</a></span>
-            </div>
-            <div class="contact-info">
+                </div>
+                <div class="contact-info">
                 <span class="icon fa-solid fa-envelope"><a href="mailto:DariaFarbe@gmail.com" rel="nofollow"
                                                            target="_blank"> DariaFarbe@gmail.com</a></span>
-            </div>
-            <div class="contact-info">
+                </div>
+                <div class="contact-info">
                 <span class="icon fa-brands fa-instagram"><a href="https://www.instagram.com/DariaFarbe_oboi"
                                                              rel="nofollow" target="_blank"> DariaFarbe_oboi</a></span>
+                </div>
             </div>
         </div>
-    </div>
-</footer>
-
-<script>
-    function resizePdfViewer() {
-        var viewer = document.getElementById('pdf-viewer');
-        viewer.style.height = (window.innerHeight * 0.8) + 'px';
-    }
-
-    window.addEventListener('resize', resizePdfViewer);
-    window.addEventListener('load', resizePdfViewer);
-</script>
+    </footer>
+</div>
 </body>
 </html>
