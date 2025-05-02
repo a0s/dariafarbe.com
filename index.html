@@ -40,6 +40,23 @@
             document.documentElement.style.setProperty('--vh', `${vh}px`);
         }
 
+        function smoothScrollToContact(event) {
+            event.preventDefault();
+            const contactSection = document.getElementById('contact');
+            contactSection.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+
+        function smoothScrollToTop(event) {
+            event.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
         window.addEventListener('resize', setRealViewportHeight);
         window.addEventListener('orientationchange', setRealViewportHeight);
         setRealViewportHeight();
@@ -314,7 +331,7 @@
 <body>
     <header class="header">
         <div class="header-content">
-            <a href="#contact" class="header-contact">Контакты</a>
+            <a href="#contact" class="header-contact" onclick="smoothScrollToContact(event)">Контакты</a>
         </div>
     </header>
     <div class="container">
@@ -349,7 +366,8 @@
             <div class="contact-page" id="contact">
                 <div class="seo-content">
                     <div class="seo-column logo-column">
-                        <img src="./images/logo.jpg" alt="Daria Farbe Logo">
+                        <img src="./images/logo.jpg" alt="Daria Farbe Logo" onclick="smoothScrollToTop(event)"
+                            style="cursor: pointer;">
                         <h3>О нас</h3>
                         <p>Daria Farbe - это уникальные авторские обои с ручной отрисовкой и высококачественной печатью.
                             Мы создаем эксклюзивные дизайны, которые преобразят ваш интерьер.</p>
