@@ -76,10 +76,13 @@
             display: block;
         }
 
-        .seo-footer {
+        .contact-page {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 20px;
+            box-sizing: border-box;
             background-color: #f8f8f8;
-            padding: 1rem 0;
-            margin-top: 0;
         }
 
         .seo-content {
@@ -96,6 +99,27 @@
         .seo-column {
             flex: 1;
             margin: 0 1rem;
+            text-align: center;
+        }
+
+        .seo-column:nth-child(2) {
+            text-align: left;
+        }
+
+        .logo-column {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo-column h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .logo-column img {
+            max-width: 200px;
+            height: auto;
         }
 
         .seo-content ul {
@@ -119,14 +143,18 @@
 
         .contact-info {
             display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            margin-bottom: 1rem;
+            align-items: center;
             gap: 0.5rem;
+            margin-bottom: 0.5rem;
         }
 
         .contact-info .icon {
-            margin-right: 0.5rem;
+            min-width: 20px;
+        }
+
+        .contact-info a {
+            text-decoration: none;
+            color: inherit;
         }
 
         footer {
@@ -219,75 +247,71 @@
             <img alt="Daria Farbe 024" loading="lazy" src="./images/oboi_024.webp">
             <img alt="Daria Farbe 025" loading="lazy" src="./images/oboi_025.webp">
             <img alt="Daria Farbe 026" loading="lazy" src="./images/oboi_026.webp">
-        </div>
-        <footer class="seo-footer">
-            <div class="seo-content">
-                <div class="seo-column">
-                    <h3>Наши коллекции</h3>
-                    <ul>
-                        <li><span class="icon fa-brands fa-instagram"></span> <a
-                                href="https://www.instagram.com/stories/highlights/18230098405281314/" rel="nofollow"
-                                target="_blank">ГДЕ ЖИВУТ
-                                МЕЧТЫ</a></li>
-                        <li><span class="icon fa-brands fa-instagram"></span> <a
-                                href="https://www.instagram.com/stories/highlights/18026014244502877/" rel="nofollow"
-                                target="_blank">МИСТЕРИЯ</a></li>
-                        <li><span class="icon fa-brands fa-instagram"></span> <a
-                                href="https://www.instagram.com/stories/highlights/18027601112281227/" rel="nofollow"
-                                target="_blank">ТАЙНАЯ
-                                КОМНАТА</a></li>
-                        <li><span class="icon fa-brands fa-instagram"></span> <a
-                                href="https://www.instagram.com/stories/highlights/17928623324872616/" rel="nofollow"
-                                target="_blank">МЕЧТАТЕЛИ</a></li>
-                        <li><span class="icon fa-brands fa-instagram"></span> <a
-                                href="https://www.instagram.com/stories/highlights/18032327882086099/" rel="nofollow"
-                                target="_blank">ДУХИ
-                                ЛЕСА</a></li>
-                        <li><span class="icon fa-brands fa-instagram"></span> <a
-                                href="https://www.instagram.com/stories/highlights/18011698049241536/" rel="nofollow"
-                                target="_blank">ПРО
-                                ЛЕС</a>
-                        </li>
-                        <li><span class="icon fa-brands fa-instagram"></span> <a
-                                href="https://www.instagram.com/stories/highlights/18014017184185653/" rel="nofollow"
-                                target="_blank">КОСМОС</a>
-                        </li>
-                        <li><span class="icon fa-brands fa-instagram"></span> <a
-                                href="https://www.instagram.com/stories/highlights/18017508689347133/" rel="nofollow"
-                                target="_blank">ЕДИНОРОЖКИ</a></li>
-                    </ul>
-                </div>
-                <div class="seo-column">
-                    <h3>О нас</h3>
-                    <p>Daria Farbe - это уникальные авторские обои с ручной отрисовкой и высококачественной печатью. Мы
-                        создаем
-                        эксклюзивные дизайны, которые преобразят ваш интерьер.</p>
-                </div>
-                <div class="seo-column">
-                    <h3>Контакты</h3>
-                    <div class="contact-info">
-                        <span class="icon fa-solid fa-phone"><a href="tel:+375298226695" rel="nofollow" target="_blank">
-                                +375 29 8226695</a></span>
+            <div class="contact-page">
+                <div class="seo-content">
+                    <div class="seo-column logo-column">
+                        <img src="./images/logo.jpg" alt="Daria Farbe Logo">
+                        <h3>О нас</h3>
+                        <p>Daria Farbe - это уникальные авторские обои с ручной отрисовкой и высококачественной печатью.
+                            Мы создаем эксклюзивные дизайны, которые преобразят ваш интерьер.</p>
                     </div>
-                    <div class="contact-info">
-                        <span class="icon fa-brands fa-telegram"><a href="https://t.me/+375298226695" rel="nofollow"
-                                target="_blank"> +375 29 8226695</a></span>
+                    <div class="seo-column">
+                        <h3>Наши коллекции</h3>
+                        <ul>
+                            <li><span class="icon fa-brands fa-instagram"></span> <a
+                                    href="https://www.instagram.com/stories/highlights/18230098405281314/"
+                                    rel="nofollow" target="_blank">ГДЕ ЖИВУТ МЕЧТЫ</a></li>
+                            <li><span class="icon fa-brands fa-instagram"></span> <a
+                                    href="https://www.instagram.com/stories/highlights/18026014244502877/"
+                                    rel="nofollow" target="_blank">МИСТЕРИЯ</a></li>
+                            <li><span class="icon fa-brands fa-instagram"></span> <a
+                                    href="https://www.instagram.com/stories/highlights/18027601112281227/"
+                                    rel="nofollow" target="_blank">ТАЙНАЯ КОМНАТА</a></li>
+                            <li><span class="icon fa-brands fa-instagram"></span> <a
+                                    href="https://www.instagram.com/stories/highlights/17928623324872616/"
+                                    rel="nofollow" target="_blank">МЕЧТАТЕЛИ</a></li>
+                            <li><span class="icon fa-brands fa-instagram"></span> <a
+                                    href="https://www.instagram.com/stories/highlights/18032327882086099/"
+                                    rel="nofollow" target="_blank">ДУХИ ЛЕСА</a></li>
+                            <li><span class="icon fa-brands fa-instagram"></span> <a
+                                    href="https://www.instagram.com/stories/highlights/18011698049241536/"
+                                    rel="nofollow" target="_blank">ПРО ЛЕС</a></li>
+                            <li><span class="icon fa-brands fa-instagram"></span> <a
+                                    href="https://www.instagram.com/stories/highlights/18014017184185653/"
+                                    rel="nofollow" target="_blank">КОСМОС</a></li>
+                            <li><span class="icon fa-brands fa-instagram"></span> <a
+                                    href="https://www.instagram.com/stories/highlights/18017508689347133/"
+                                    rel="nofollow" target="_blank">ЕДИНОРОЖКИ</a></li>
+                        </ul>
                     </div>
-                    <div class="contact-info">
-                        <span class="icon fa-brands fa-whatsapp"><a href="https://wa.me/375298226695" rel="nofollow"
-                                target="_blank"> +375 29 8226695</a></span>
-                    </div>
-                    <div class="contact-info">
-                        <span class="icon fa-solid fa-envelope"><a href="mailto:DariaFarbe@gmail.com" rel="nofollow"
-                                target="_blank"> DariaFarbe@gmail.com</a></span>
-                    </div>
-                    <div class="contact-info">
-                        <span class="icon fa-brands fa-instagram"><a href="https://www.instagram.com/DariaFarbe_oboi"
-                                rel="nofollow" target="_blank"> DariaFarbe_oboi</a></span>
+                    <div class="seo-column">
+                        <h3>Контакты</h3>
+                        <div class="contact-info">
+                            <span class="icon fa-solid fa-phone"></span><a href="tel:+375298226695" rel="nofollow"
+                                target="_blank">
+                                +375 29 8226695</a>
+                        </div>
+                        <div class="contact-info">
+                            <span class="icon fa-brands fa-telegram"></span><a href="https://t.me/+375298226695"
+                                rel="nofollow" target="_blank"> +375 29 8226695</a>
+                        </div>
+                        <div class="contact-info">
+                            <span class="icon fa-brands fa-whatsapp"></span><a href="https://wa.me/375298226695"
+                                rel="nofollow" target="_blank"> +375 29 8226695</a>
+                        </div>
+                        <div class="contact-info">
+                            <span class="icon fa-solid fa-envelope"></span><a href="mailto:DariaFarbe@gmail.com"
+                                rel="nofollow" target="_blank"> DariaFarbe@gmail.com</a>
+                        </div>
+                        <div class="contact-info">
+                            <span class="icon fa-brands fa-instagram"></span><a
+                                href="https://www.instagram.com/DariaFarbe_oboi" rel="nofollow" target="_blank">
+                                DariaFarbe_oboi</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </footer>
+        </div>
     </div>
 </body>
 
