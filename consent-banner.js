@@ -1,5 +1,10 @@
+// Configuration
+const CONFIG = {
+    GA_ID: 'G-FRRNN9FLRG',
+    CONSENT_KEY: 'analytics_consent'
+};
+
 // Consent management
-const CONSENT_KEY = 'analytics_consent';
 let gtag = null;
 
 function showConsentDialog() {
@@ -19,7 +24,7 @@ function showSettingsDialog() {
         // Set toggle state based on current consent
         const analyticsToggle = document.getElementById('analytics-toggle');
         if (analyticsToggle) {
-            const consent = localStorage.getItem(CONSENT_KEY);
+            const consent = localStorage.getItem(CONFIG.CONSENT_KEY);
             // If no consent is stored, default to true in settings dialog
             analyticsToggle.checked = consent === null ? true : consent === 'true';
 
@@ -37,22 +42,29 @@ function hideSettingsDialog() {
 }
 
 function loadGoogleAnalytics() {
+    console.log('Loading Google Analytics...');
     const script = document.createElement('script');
     script.async = true;
-    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-FRRNN9FLRG';
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${CONFIG.GA_ID}`;
+    script.onload = () => console.log('Google Analytics script loaded successfully');
+    script.onerror = () => console.error('Failed to load Google Analytics script');
     document.head.appendChild(script);
 
     window.dataLayer = window.dataLayer || [];
-    gtag = function () { dataLayer.push(arguments); }
+    gtag = function () {
+        console.log('GA Event:', arguments[0], arguments[1]);
+        dataLayer.push(arguments);
+    }
     gtag('js', new Date());
-    gtag('config', 'G-FRRNN9FLRG', {
+    gtag('config', CONFIG.GA_ID, {
         'consent_mode': 'advanced',
         'analytics_storage': 'granted'
     });
+    console.log('Google Analytics initialized with ID:', CONFIG.GA_ID);
 }
 
 function setConsent(accepted) {
-    localStorage.setItem(CONSENT_KEY, accepted);
+    localStorage.setItem(CONFIG.CONSENT_KEY, accepted);
     hideConsentDialog();
 
     if (accepted) {
@@ -91,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (saveSettingsButton) saveSettingsButton.addEventListener('click', saveSettings);
 
     // Check consent state
-    const consent = localStorage.getItem(CONSENT_KEY);
+    const consent = localStorage.getItem(CONFIG.CONSENT_KEY);
 
     if (consent === null) {
         // No consent stored - show dialog for new users
