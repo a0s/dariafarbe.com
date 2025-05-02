@@ -342,32 +342,44 @@
             bottom: 0;
             left: 0;
             right: 0;
-            background-color: rgba(0, 0, 0, 0.8);
+            background-color: rgba(45, 45, 45, 0.95);
             color: #fff;
             padding: 20px;
             display: flex;
-            justify-content: center;
-            align-items: center;
+            flex-direction: column;
             z-index: 1000;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
         }
 
-        .consent-content {
-            max-width: 800px;
+        .consent-dialog-content {
+            max-width: 1200px;
             width: 100%;
-            padding: 20px;
-            background-color: #2d2d2d;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            margin: 0 auto;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+
+        .consent-dialog h3 {
+            margin: 0 0 10px 0;
+            font-size: 1.2em;
+            text-align: left;
+        }
+
+        .consent-dialog p {
+            margin: 0 0 20px 0;
+            text-align: left;
+            max-width: 800px;
         }
 
         .consent-buttons {
             display: flex;
             gap: 10px;
-            margin-top: 20px;
+            margin-top: 10px;
+            justify-content: flex-end;
         }
 
         .consent-button {
-            padding: 8px 16px;
+            padding: 12px 24px;
             border: none;
             border-radius: 4px;
             cursor: pointer;
@@ -375,6 +387,7 @@
             transition: all 0.3s;
             background-color: #333;
             color: white;
+            font-size: 1.1em;
         }
 
         .consent-button:hover {
@@ -502,13 +515,24 @@
             margin-top: 20px;
             text-align: right;
         }
+
+        @media (max-width: 767px) {
+            .consent-dialog-content {
+                padding: 0 10px;
+            }
+
+            .consent-button {
+                padding: 8px 16px;
+                font-size: 0.9em;
+            }
+        }
     </style>
 </head>
 
 <body>
     <!-- Consent Dialog -->
     <div id="consent-dialog" class="consent-dialog" style="display: none;">
-        <div class="consent-content">
+        <div class="consent-dialog-content">
             <h3>Cookie Consent</h3>
             <p>We use cookies to analyze site usage and improve your experience. By continuing to use our site, you
                 agree to our use of cookies.</p>
