@@ -335,6 +335,33 @@
             margin: 0 0 10px 0;
             font-size: 1.2em;
             text-align: left;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .language-switcher {
+            display: flex;
+            gap: 8px;
+            font-size: 0.9em;
+        }
+
+        .language-switcher button {
+            background: none;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            padding: 4px 8px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .language-switcher button:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .language-switcher button.active {
+            background-color: rgba(255, 255, 255, 0.2);
         }
 
         .consent-dialog p {
@@ -505,7 +532,13 @@
     <!-- Consent Dialog -->
     <div id="consent-dialog" class="consent-dialog" style="display: none;">
         <div class="consent-dialog-content">
-            <h3>Cookie Consent</h3>
+            <h3>
+                <span class="title-text">Cookie Consent</span>
+                <div class="language-switcher">
+                    <button id="lang-ru">RU</button>
+                    <button id="lang-en">EN</button>
+                </div>
+            </h3>
             <p>We use cookies to analyze site usage and improve your experience. By continuing to use our site, you
                 agree to our use of cookies.</p>
             <div class="consent-buttons">
@@ -645,6 +678,28 @@
             </div>
         </div>
     </div>
+
+    <script>
+        // Initialize language
+        const initialLang = getInitialLanguage();
+        updateLanguage(initialLang);
+
+        // Language switcher functionality
+        document.getElementById('lang-ru').addEventListener('click', () => {
+            updateLanguage('ru');
+            document.getElementById('lang-ru').classList.add('active');
+            document.getElementById('lang-en').classList.remove('active');
+        });
+
+        document.getElementById('lang-en').addEventListener('click', () => {
+            updateLanguage('en');
+            document.getElementById('lang-en').classList.add('active');
+            document.getElementById('lang-ru').classList.remove('active');
+        });
+
+        // Set initial active language button
+        document.getElementById(`lang-${initialLang}`).classList.add('active');
+    </script>
 </body>
 
 </html>

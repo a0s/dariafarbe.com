@@ -4,6 +4,58 @@ const CONFIG = {
     CONSENT_KEY: 'analytics_consent'
 };
 
+// Language management
+const translations = {
+    ru: {
+        title: 'Согласие на использование файлов cookie',
+        description: 'Мы используем файлы cookie для анализа использования сайта и улучшения вашего опыта. Продолжая использовать наш сайт, вы соглашаетесь с использованием файлов cookie.',
+        acceptAll: 'Принять все',
+        rejectAll: 'Отклонить все',
+        settings: 'Настройки',
+        settingsTitle: 'Настройки файлов cookie',
+        analyticsTitle: 'Google Analytics',
+        analyticsDescription: 'Мы используем Google Analytics для понимания того, как посетители взаимодействуют с нашим сайтом.',
+        saveSettings: 'Сохранить настройки'
+    },
+    en: {
+        title: 'Cookie Consent',
+        description: 'We use cookies to analyze site usage and improve your experience. By continuing to use our site, you agree to our use of cookies.',
+        acceptAll: 'Accept All',
+        rejectAll: 'Reject All',
+        settings: 'Settings',
+        settingsTitle: 'Cookie Settings',
+        analyticsTitle: 'Google Analytics',
+        analyticsDescription: 'We use Google Analytics to understand how visitors interact with our website.',
+        saveSettings: 'Save Settings'
+    }
+};
+
+function getInitialLanguage() {
+    const browserLang = navigator.language || navigator.userLanguage;
+    return browserLang.startsWith('ru') ? 'ru' : 'en';
+}
+
+function updateLanguage(lang) {
+    const elements = {
+        title: document.querySelector('.consent-dialog h3 .title-text'),
+        description: document.querySelector('.consent-dialog p'),
+        acceptAll: document.getElementById('accept-all'),
+        rejectAll: document.getElementById('reject-all'),
+        settings: document.getElementById('settings-button'),
+        settingsTitle: document.querySelector('.settings-content h3'),
+        analyticsTitle: document.querySelector('.setting-info h4'),
+        analyticsDescription: document.querySelector('.setting-info p'),
+        saveSettings: document.getElementById('save-settings')
+    };
+
+    const translation = translations[lang];
+    for (const [key, element] of Object.entries(elements)) {
+        if (element) {
+            element.textContent = translation[key];
+        }
+    }
+}
+
 // Consent management
 let gtag = null;
 
@@ -89,6 +141,31 @@ function saveSettings() {
 
 // Initialize consent management
 document.addEventListener('DOMContentLoaded', () => {
+    // Initialize language
+    const initialLang = getInitialLanguage();
+    updateLanguage(initialLang);
+
+    // Set up language switcher
+    const langRuBtn = document.getElementById('lang-ru');
+    const langEnBtn = document.getElementById('lang-en');
+
+    if (langRuBtn && langEnBtn) {
+        langRuBtn.addEventListener('click', () => {
+            updateLanguage('ru');
+            langRuBtn.classList.add('active');
+            langEnBtn.classList.remove('active');
+        });
+
+        langEnBtn.addEventListener('click', () => {
+            updateLanguage('en');
+            langEnBtn.classList.add('active');
+            langRuBtn.classList.remove('active');
+        });
+
+        // Set initial active language button
+        document.getElementById(`lang-${initialLang}`).classList.add('active');
+    }
+
     // Add event listeners only after DOM is loaded
     const acceptButton = document.getElementById('accept-all');
     const rejectButton = document.getElementById('reject-all');
